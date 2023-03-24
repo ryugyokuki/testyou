@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'testappservicegenka'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C6F11EE6F15B4BF6BDE02AF84064238A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D5B5B15C8C52440ABCC557E7A3CC0929 }}
           package: '*.war'
