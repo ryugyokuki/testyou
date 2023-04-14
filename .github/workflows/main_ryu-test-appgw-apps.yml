@@ -65,3 +65,6 @@ jobs:
           private-dns-zone-resource-group: 'hoshino-test'
           private-dns-zone-name: 'privatelink.azurewebsites.net'
           private-dns-zone-relative-record-set-name: 'ryu-test-appgw-apps'
+          client-id: 'd718cf15-c629-44e8-af7b-cb41164b5223'
+          client-secret: '8TM8Q~RKu9hZbQRFs2FaytibniYz6t82YaCdMcRQ'
+          tenant-id: 'fe4e4d7c-8daf-4370-93da-c9049b705b05'
