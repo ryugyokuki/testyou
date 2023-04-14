@@ -51,8 +51,9 @@ jobs:
           name: php-app
           
       - name: Install az CLI
-        run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+        uses: azure/setup-azcli@v1
+        with:
+          install-version: 'latest'
 
       - name: Azure Login
         uses: azure/login@v1
