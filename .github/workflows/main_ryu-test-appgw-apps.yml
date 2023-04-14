@@ -64,4 +64,4 @@ jobs:
           private-link-id: 'ryutestappservicepe'
           private-dns-zone-resource-group: 'hoshino-test'
           private-dns-zone-name: 'privatelink.azurewebsites.net'
-          private-dns-zone-relative-record-set-name: 'ryu-test-appgw-apps' 
+          private-dns-zone-relative-record-set-name: 'ryu-test-appgw-apps'
