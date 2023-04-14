@@ -50,11 +50,6 @@ jobs:
         with:
           name: php-app
           
-      - name: Install az CLI
-        uses: azure/setup-azcli@v1
-        with:
-          install-version: 'latest'
-
       - name: Azure Login
         uses: azure/login@v1
         with:
