@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'ryu-test-appgw-apps'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C5CD0C97DAF145F4854206338C63A65C }}
+          publish-profile: '<publishData><publishProfile profileName="ryu-test-appgw-apps - Web Deploy" publishMethod="MSDeploy" publishUrl="ryu-test-appgw-apps.scm.azurewebsites.net:443" msdeploySite="ryu-test-appgw-apps" userName="$ryu-test-appgw-apps" userPWD="ZPadaCJa901AmgHHmaNlKDL4BSvij70WaC6LlYuQGsciZwJvlpq3igPR7dJi" destinationAppUrl="https://ryu-test-appgw-apps.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>'
           package: .
