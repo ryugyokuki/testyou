@@ -58,3 +58,10 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7091F0303ECC418AB2266221D9E32166 }}
           package: .
+          azure-resource-name: 'ryu-test-appgw-apps'
+          azure-resource-group: 'hoshino-test'
+          use-private-link: true
+          private-link-id: '/subscriptions/fcd48547-0c99-4366-a479-8d186594356c/resourceGroups/hoshino-test/providers/Microsoft.Web/sites/ryu-test-appgw-apps/privateLinkConfigurations/ryu-test-appgw-apps.plcfg'
+          private-dns-zone-resource-group: 'hoshino-test'
+          private-dns-zone-name: 'privatelink.azurewebsites.net'
+          private-dns-zone-relative-record-set-name: 'ryu-test-appgw-apps' 
