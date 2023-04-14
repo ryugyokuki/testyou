@@ -49,6 +49,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: php-app
+          
+      - name: Install az CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
       - name: Azure Login
         uses: azure/login@v1
