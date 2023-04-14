@@ -58,8 +58,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: '<publishData><publishProfile profileName="ryu-test-appgw-apps - Web Deploy" publishMethod="MSDeploy" publishUrl="ryu-test-appgw-apps.scm.azurewebsites.net:443" msdeploySite="ryu-test-appgw-apps" userName="$ryu-test-appgw-apps" userPWD="ZPadaCJa901AmgHHmaNlKDL4BSvij70WaC6LlYuQGsciZwJvlpq3igPR7dJi" destinationAppUrl="https://ryu-test-appgw-apps.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>'
           package: .
-          use-private-link: true
-          private-link-id: '/subscriptions/fcd48547-0c99-4366-a479-8d186594356c/resourceGroups/hoshino-test/providers/Microsoft.Network/privateEndpoints/ryutestappservicepe'
-          private-dns-zone-resource-group: 'hoshino-test'
-          private-dns-zone-name: 'privatelink.azurewebsites.net'
-          private-dns-zone-relative-record-set-name: 'ryu-test-appgw-apps' 
+          
