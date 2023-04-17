@@ -12,6 +12,7 @@ on:
 env:
   WEBAPP: ryu-test-appgw-apps
   GROUP: hoshino-test
+  AZUREPS_HOST_ENVIRONMENT: AzureCloud
 
 jobs:
   build:
@@ -64,6 +65,6 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'ryu-test-appgw-apps'
-          slot-name: 'ryu-test-slot'
+          slot-name: 'production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
