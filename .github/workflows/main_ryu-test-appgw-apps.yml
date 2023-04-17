@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy PHP app to Azure Web App - ryu-test-appgw-apps
 
 on:
@@ -55,7 +52,6 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # 追加: アプリ設定の更新
       - name: 'Update app settings for Private Endpoint'
         uses: azure/appservice-settings@v1
         with:
@@ -67,9 +63,6 @@ jobs:
                 "value": "ryutestappservicepe-b2e0-b83c4ac0-3ed0-4f96-a4ba-08b79133b0ea"
               }
             ]
-        env:
-          AZURE_HTTP_USER_AGENT: "DefaultUserAgent"
-          AZUREPS_HOST_ENVIRONMENT: "AzureCloud"
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -79,7 +72,3 @@ jobs:
           slot-name: 'production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
-        env:
-          WEBSITES_ENABLE_APP_SERVICE_STORAGE: true
-          WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS: 'ryutestappservicepe-b2e0-b83c4ac0-3ed0-4f96-a4ba-08b79133b0ea'
-          SCM_DO_BUILD_DURING_DEPLOYMENT: true
