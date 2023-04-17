@@ -55,6 +55,22 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      # 追加: アプリ設定の更新
+      - name: 'Update app settings for Private Endpoint'
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: 'ryu-test-appgw-apps'
+          app-settings-json: |
+            [
+              {
+                "name": "WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS",
+                "value": "ryutestappservicepe-b2e0-b83c4ac0-3ed0-4f96-a4ba-08b79133b0ea"
+              }
+            ]
+        env:
+          AZURE_HTTP_USER_AGENT: "DefaultUserAgent"
+          AZUREPS_HOST_ENVIRONMENT: "AzureCloud"
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
@@ -65,8 +81,8 @@ jobs:
           package: .
           args: --verbose
         env:
-          AZURE_HTTP_USER_AGENT: "DefaultUserAgent"
-          AZUREPS_HOST_ENVIRONMENT: "AzureCloud"
+          #AZURE_HTTP_USER_AGENT: "DefaultUserAgent"
+          #AZUREPS_HOST_ENVIRONMENT: "AzureCloud"
           WEBSITES_ENABLE_APP_SERVICE_STORAGE: true
           WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS: 'ryutestappservicepe-b2e0-b83c4ac0-3ed0-4f96-a4ba-08b79133b0ea'
           SCM_DO_BUILD_DURING_DEPLOYMENT: true
