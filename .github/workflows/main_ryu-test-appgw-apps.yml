@@ -67,5 +67,5 @@ jobs:
           AZURE_HTTP_USER_AGENT: "DefaultUserAgent"
           AZUREPS_HOST_ENVIRONMENT: "AzureCloud"
           WEBSITES_ENABLE_APP_SERVICE_STORAGE: true
-          WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS: 'ryutestappservicepe'
+          WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS: 'ryutestappservicepe-b2e0-b83c4ac0-3ed0-4f96-a4ba-08b79133b0ea'
           SCM_DO_BUILD_DURING_DEPLOYMENT: true
