@@ -9,11 +9,6 @@ on:
       - main
   workflow_dispatch:
 
-env:
-  WEBAPP: ryu-test-appgw-apps
-  GROUP: hoshino-test
-  AZUREPS_HOST_ENVIRONMENT: AzureCloud
-
 jobs:
   build:
     runs-on: ubuntu-latest
