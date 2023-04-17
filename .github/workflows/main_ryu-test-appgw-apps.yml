@@ -68,3 +68,4 @@ jobs:
           AZUREPS_HOST_ENVIRONMENT: "AzureCloud"
           WEBSITES_ENABLE_APP_SERVICE_STORAGE: true
           WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS: 'ryutestappservicepe'
+          SCM_DO_BUILD_DURING_DEPLOYMENT: true
