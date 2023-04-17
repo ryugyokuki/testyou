@@ -64,6 +64,5 @@ jobs:
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
         env:
-          WEBSITE_LOAD_CERTIFICATES: {certificate-thumbprint}
           WEBSITES_ENABLE_APP_SERVICE_STORAGE: true
           WEBSITES_PRIVATE_ENDPOINT_CONNECTIONS: 'ryutestappservicepe'
