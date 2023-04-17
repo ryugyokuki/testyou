@@ -64,8 +64,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'ryu-test-appgw-apps'
-          slot-name: 'Production'
-          azcliversion: 2.19.1
-          inlineScript: az webapp deploy --name $WEBAPP --resource-group $GROUP --type static
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
